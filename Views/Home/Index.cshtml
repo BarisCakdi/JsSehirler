@@ -1,0 +1,107 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<form id="sehirForm" class="col-mb-5">
+    <div class="row">
+        <div class="col-lg-6">
+            <label for="inputCityName">Şehir Adı</label>
+            <input required type="text" class="form-control" name="isim" id="inputCityName" />
+        </div>
+        <div class="col-lg-6">
+            <label for="inputFamous">Özelliği</label>
+            <input required type="text" class="form-control" name="meshur" id="inputFamous" />
+        </div>
+        <div class="col-lg-6">
+            <label for="inputCategory">Kategori</label>
+            <select required class="form-select" name="tip" id="inputCategory">
+                <option disabled selected value="">Seçiniz</option>
+                <option value="yemek">Yemeği</option>
+                <option value="tarih">Tarihi Yer</option>
+            </select>
+        </div>
+        <div class="col-lg-6">
+            <label  for="inputPlateNumber">Plaka</label>
+            <input required type="number" class="form-control" name="plaka" id="inputPlateNumber" />
+        </div>
+       
+        <div class="text-end" style="padding-top:20px;">
+            <button class="btn btn-primary">Ekle</button>
+        </div>
+    </div>
+</form>
+
+<div class="row" style="padding-top:40px;">
+    <div class="col-lg-12">
+        <h5>Tüm Şehirler</h5>
+        <table class="table">
+            <thead style="font-weight:bold">
+                <tr>
+                    <td>İsim</td>
+                    <td>Meşhur</td>
+                    <td>Özelliği</td>
+                    <td>Plaka</td>
+                </tr>
+            </thead>
+            <tbody id="sehirTablo">
+            </tbody>
+        </table>
+    </div>
+    <div class="col-lg-6" style="padding-top:20px;">
+        <h5>Yemeği İle meşhur olanlar</h5>
+        <table class="table">
+            <thead style="font-weight:bold">
+                <tr>
+                    <td>İsim</td>
+                    <td>Yemek</td>
+                </tr>
+            </thead>
+            <tbody id="citiFood">
+                <tr></tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-lg-6" style="padding-top:20px;">
+        <h5>Tarihi ile meşhur olanlar</h5>
+        <table class="table">
+            <thead style="font-weight:bold">
+                <tr>
+                    <td>İsim</td>
+                    <td>Tarihi Yeri</td>
+                </tr>
+            </thead>
+            <tbody id="citiHistory">
+                <tr></tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-lg-6" style="padding-top:20px;">
+        <h5>Plaka Tek Numara Olanlar</h5>
+        <table class="table">
+            <thead style="font-weight:bold">
+                <tr>
+                    <td>İsim</td>
+                    <td>Plaka</td>
+                </tr>
+            </thead>
+            <tbody id="citiPlate1">
+                <tr></tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-lg-6" style="padding-top:20px;">
+    <h5>Plaka Çift Numara Olanlar</h5>
+    <table class="table">
+        <thead style="font-weight:bold">
+            <tr>
+                <td>İsim</td>
+                <td>Tarihi Yeri</td>
+            </tr>
+        </thead>
+        <tbody id="citiPlate2">
+            <tr></tr>
+        </tbody>
+    </table>
+</div>
+</div>
+
